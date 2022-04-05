@@ -13,9 +13,10 @@ import android.widget.Toast;
 
 public class StartView extends AppCompatActivity {
 
-    EditText txtHours, txtName;
-    int employeeType;
-    String TAG = "start";
+    private EditText txtHours, txtName;
+    private String TAG = "start";
+    private int employeeType;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -6,26 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".CalculatedWageView">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/bg_white" />
+
     <TextView
         android:id="@+id/txtTitle"
-        android:layout_width="308dp"
-        android:layout_height="39dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
+        android:fontFamily="@font/poppins_black"
         android:text="Calculated Wage"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="23sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="332dp"
-        android:layout_height="208dp"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:stretchColumns="0,1"
         app:layout_constraintBottom_toTopOf="@+id/btnRestart"
@@ -36,6 +48,7 @@
         <TableRow>
 
             <TextView
+                android:fontFamily="@font/poppins_bold"
                 android:padding="5dip"
                 android:text="Employee Type:"
                 android:textColor="@color/black"
@@ -44,6 +57,7 @@
 
             <TextView
                 android:id="@+id/txtEmployee"
+                android:fontFamily="@font/poppins_light"
                 android:gravity="right"
                 android:padding="5dip"
                 android:text="employee"
@@ -54,6 +68,7 @@
         <TableRow>
 
             <TextView
+                android:fontFamily="@font/poppins_bold"
                 android:gravity="left"
                 android:padding="5dip"
                 android:text="Total Wage Received:"
@@ -64,6 +79,7 @@
             <TextView
                 android:id="@+id/txtWageTotal"
                 android:layout_column="1"
+                android:fontFamily="@font/poppins_light"
                 android:gravity="right"
                 android:padding="5dip"
                 android:text="total wage"
@@ -78,6 +94,7 @@
         <TableRow>
 
             <TextView
+                android:fontFamily="@font/poppins_bold"
                 android:gravity="left"
                 android:padding="5dip"
                 android:text="Total Regular Wage:"
@@ -88,6 +105,7 @@
             <TextView
                 android:id="@+id/txtWage"
                 android:layout_column="1"
+                android:fontFamily="@font/poppins_light"
                 android:gravity="right"
                 android:padding="5dip"
                 android:text="regular wage"
@@ -98,6 +116,7 @@
         <TableRow>
 
             <TextView
+                android:fontFamily="@font/poppins_bold"
                 android:padding="5dip"
                 android:text="Total Overtime Wage:"
                 android:textColor="@color/black"
@@ -106,11 +125,13 @@
 
             <TextView
                 android:id="@+id/txtWageOT"
+                android:fontFamily="@font/poppins_light"
                 android:gravity="right"
                 android:padding="5dip"
                 android:text="overtime wage"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
+
         </TableRow>
 
         <View
@@ -120,6 +141,7 @@
         <TableRow>
 
             <TextView
+                android:fontFamily="@font/poppins_bold"
                 android:gravity="left"
                 android:padding="5dip"
                 android:text="Total Hours Rendered:"
@@ -130,6 +152,7 @@
             <TextView
                 android:id="@+id/txtHoursTotal"
                 android:layout_column="1"
+                android:fontFamily="@font/poppins_light"
                 android:gravity="right"
                 android:padding="5dip"
                 android:text="hours"
@@ -140,6 +163,7 @@
         <TableRow>
 
             <TextView
+                android:fontFamily="@font/poppins_bold"
                 android:padding="5dip"
                 android:text="Total Hours Overtime:"
                 android:textColor="@color/black"
@@ -148,6 +172,7 @@
 
             <TextView
                 android:id="@+id/txtHoursOT"
+                android:fontFamily="@font/poppins_light"
                 android:gravity="right"
                 android:padding="5dip"
                 android:text="hours OT"
@@ -160,13 +185,16 @@
 
     <Button
         android:id="@+id/btnRestart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
         android:layout_marginTop="20dp"
+        android:backgroundTint="#000000"
+        android:fontFamily="@font/poppins_bold"
         android:onClick="wageRestart"
         android:text="Restart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/tableLayout"
         app:layout_constraintStart_toStartOf="@+id/tableLayout"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
