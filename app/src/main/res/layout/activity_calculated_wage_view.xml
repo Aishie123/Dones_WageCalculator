@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculatedWageView">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="308dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="15dp"
+        android:text="Calculated Wage"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="332dp"
+        android:layout_height="208dp"
+        android:gravity="center"
+        android:stretchColumns="0,1"
+        app:layout_constraintBottom_toTopOf="@+id/btnRestart"
+        app:layout_constraintEnd_toEndOf="@+id/txtTitle"
+        app:layout_constraintStart_toStartOf="@+id/txtTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle">
+
+        <TableRow>
+
+            <TextView
+                android:padding="5dip"
+                android:text="Employee Type:"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtEmployee"
+                android:gravity="right"
+                android:padding="5dip"
+                android:text="employee"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:padding="5dip"
+                android:text="Total Wage Received:"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtWageTotal"
+                android:layout_column="1"
+                android:gravity="right"
+                android:padding="5dip"
+                android:text="total wage"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <View
+            android:layout_height="2dip"
+            android:background="#000000" />
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:padding="5dip"
+                android:text="Total Regular Wage:"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtWage"
+                android:layout_column="1"
+                android:gravity="right"
+                android:padding="5dip"
+                android:text="regular wage"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="5dip"
+                android:text="Total Overtime Wage:"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtWageOT"
+                android:gravity="right"
+                android:padding="5dip"
+                android:text="overtime wage"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <View
+            android:layout_height="2dip"
+            android:background="#000000" />
+
+        <TableRow>
+
+            <TextView
+                android:gravity="left"
+                android:padding="5dip"
+                android:text="Total Hours Rendered:"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtHoursTotal"
+                android:layout_column="1"
+                android:gravity="right"
+                android:padding="5dip"
+                android:text="hours"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="5dip"
+                android:text="Total Hours Overtime:"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtHoursOT"
+                android:gravity="right"
+                android:padding="5dip"
+                android:text="hours OT"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </TableRow>
+
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btnRestart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="wageRestart"
+        android:text="Restart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tableLayout"
+        app:layout_constraintStart_toStartOf="@+id/tableLayout"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

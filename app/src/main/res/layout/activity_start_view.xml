@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartView">
+
+    <!-- TODO: improve UI layout -->
+
+    <TextView
+        android:id="@+id/viewEmployeeType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Employee Type:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="@+id/txtName"
+        app:layout_constraintStart_toStartOf="@+id/txtName"
+        app:layout_constraintTop_toBottomOf="@+id/txtName"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/viewEmployeeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Employee Name:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/viewHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Hours of Work:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtHours"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        tools:ignore="HardcodedText" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="191dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/viewHours"
+        app:layout_constraintEnd_toEndOf="@+id/viewEmployeeType"
+        app:layout_constraintStart_toStartOf="@+id/viewEmployeeType"
+        app:layout_constraintTop_toBottomOf="@+id/viewEmployeeType">
+
+        <RadioButton
+            android:id="@+id/radioRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="regular"
+            android:text="Regular Employee"
+            android:textSize="15sp"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radioProbationary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="probationary"
+            android:text="Probationary Employee"
+            android:textSize="15sp"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radioPartTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="partTime"
+            android:text="Part Time Employee"
+            android:textSize="15sp"
+            tools:ignore="HardcodedText" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Enter your name here"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/viewEmployeeType"
+        app:layout_constraintEnd_toEndOf="@+id/viewEmployeeName"
+        app:layout_constraintStart_toStartOf="@+id/viewEmployeeName"
+        app:layout_constraintTop_toBottomOf="@+id/viewEmployeeName"
+        tools:ignore="Autofill,HardcodedText,TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/txtHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Enter hours of work done"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalculate"
+        app:layout_constraintEnd_toEndOf="@+id/viewHours"
+        app:layout_constraintStart_toStartOf="@+id/viewHours"
+        app:layout_constraintTop_toBottomOf="@+id/viewHours"
+        tools:ignore="Autofill,HardcodedText,TextContrastCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:onClick="startCalculate"
+        android:text="Calculate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtHours"
+        app:layout_constraintStart_toStartOf="@+id/txtHours"
+        app:layout_constraintTop_toBottomOf="@+id/txtHours"
+        tools:ignore="HardcodedText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
