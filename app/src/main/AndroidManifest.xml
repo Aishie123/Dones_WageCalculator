@@ -10,15 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Dones_WageCalculator">
         <activity
-            android:name=".CalculatedWageView"
-            android:exported="true">
-        </activity>
+            android:name=".View.CalculatedWageView"
+            android:exported="true" />
         <activity
-            android:name=".StartView"
-            android:exported="true">
+            android:name=".View.StartView"
+            android:exported="true" />
+        <activity
+            android:name=".View.SplashScreen"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
