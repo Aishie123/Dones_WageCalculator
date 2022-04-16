@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CalculatedWageView">
+    tools:context=".View.CalculatedWageView">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_width="1080dp"
+        android:layout_height="1920dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:srcCompat="@drawable/bg_white" />
 
     <TextView
@@ -23,9 +23,10 @@
         android:layout_marginBottom="15dp"
         android:fontFamily="@font/poppins_black"
         android:text="Calculated Wage"
+        android:autoSizeTextType="uniform"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +37,7 @@
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="360dp"
+        android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:stretchColumns="0,1"
@@ -49,20 +50,22 @@
 
             <TextView
                 android:fontFamily="@font/poppins_bold"
-                android:padding="5dip"
+                android:padding="3dip"
                 android:text="Employee Type:"
+                android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtEmployee"
                 android:fontFamily="@font/poppins_light"
                 android:gravity="right"
-                android:padding="5dip"
+                android:padding="3dip"
                 android:text="employee"
+                android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </TableRow>
 
         <TableRow>
@@ -70,10 +73,11 @@
             <TextView
                 android:fontFamily="@font/poppins_bold"
                 android:gravity="left"
-                android:padding="5dip"
+                android:padding="3dip"
                 android:text="Total Wage Received:"
+                android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -81,10 +85,11 @@
                 android:layout_column="1"
                 android:fontFamily="@font/poppins_light"
                 android:gravity="right"
-                android:padding="5dip"
+                android:padding="3dip"
                 android:text="total wage"
+                android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </TableRow>
 
         <View
@@ -96,10 +101,11 @@
             <TextView
                 android:fontFamily="@font/poppins_bold"
                 android:gravity="left"
-                android:padding="5dip"
+                android:padding="3dip"
                 android:text="Total Regular Wage:"
+                android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -107,30 +113,33 @@
                 android:layout_column="1"
                 android:fontFamily="@font/poppins_light"
                 android:gravity="right"
-                android:padding="5dip"
+                android:padding="3dip"
                 android:text="regular wage"
+                android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </TableRow>
 
         <TableRow>
 
             <TextView
                 android:fontFamily="@font/poppins_bold"
-                android:padding="5dip"
+                android:padding="3dip"
                 android:text="Total Overtime Wage:"
+                android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtWageOT"
                 android:fontFamily="@font/poppins_light"
                 android:gravity="right"
-                android:padding="5dip"
+                android:padding="3dip"
                 android:text="overtime wage"
+                android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
 
         </TableRow>
 
@@ -143,10 +152,11 @@
             <TextView
                 android:fontFamily="@font/poppins_bold"
                 android:gravity="left"
-                android:padding="5dip"
+                android:padding="3dip"
                 android:text="Total Hours Rendered:"
+                android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -154,33 +164,34 @@
                 android:layout_column="1"
                 android:fontFamily="@font/poppins_light"
                 android:gravity="right"
-                android:padding="5dip"
+                android:padding="3dip"
                 android:text="hours"
+                android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </TableRow>
 
         <TableRow>
 
             <TextView
                 android:fontFamily="@font/poppins_bold"
-                android:padding="5dip"
+                android:padding="3dip"
                 android:text="Total Hours Overtime:"
+                android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtHoursOT"
                 android:fontFamily="@font/poppins_light"
                 android:gravity="right"
-                android:padding="5dip"
+                android:padding="3dip"
                 android:text="hours OT"
+                android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:textSize="14sp" />
         </TableRow>
-
-
     </TableLayout>
 
     <Button
@@ -192,6 +203,7 @@
         android:fontFamily="@font/poppins_bold"
         android:onClick="wageRestart"
         android:text="Restart"
+        android:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/tableLayout"
         app:layout_constraintStart_toStartOf="@+id/tableLayout"

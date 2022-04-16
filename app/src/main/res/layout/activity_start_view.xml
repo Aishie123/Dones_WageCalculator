@@ -4,32 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StartView">
+    tools:context=".View.StartView">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="1080dp"
+        android:layout_height="1920dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/bg_white" />
-
-    <TextView
-        android:id="@+id/txtTitle"
-        android:layout_width="304dp"
-        android:layout_height="51dp"
-        android:layout_marginBottom="40dp"
-        android:fontFamily="@font/poppins_black"
-        android:text="Wage Calculator"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/viewEmployeeName"
-        app:layout_constraintEnd_toEndOf="@+id/viewEmployeeName"
-        app:layout_constraintStart_toStartOf="@+id/viewEmployeeName" />
 
     <TextView
         android:id="@+id/viewEmployeeType"
@@ -54,7 +39,6 @@
         android:text="Employee Name:"
         android:textColor="@color/black"
         android:textSize="20sp"
-        android:layout_marginTop="50dp"
         app:layout_constraintBottom_toTopOf="@+id/txtName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -133,6 +117,7 @@
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/viewEmployeeType"
         app:layout_constraintEnd_toEndOf="@+id/viewEmployeeName"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="@+id/viewEmployeeName"
         app:layout_constraintTop_toBottomOf="@+id/viewEmployeeName"
         tools:ignore="Autofill,HardcodedText,TextContrastCheck" />
@@ -147,7 +132,7 @@
         android:hint="Enter hours of work done"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
-        android:textSize="15dp"
+        android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/btnCalculate"
         app:layout_constraintEnd_toEndOf="@+id/viewHours"
         app:layout_constraintHorizontal_bias="0.479"
@@ -157,9 +142,10 @@
 
     <Button
         android:id="@+id/btnCalculate"
-        android:layout_width="126dp"
-        android:layout_height="53dp"
+        android:layout_width="150dp"
+        android:layout_height="51dp"
         android:layout_marginTop="40dp"
+        android:autoSizeTextType="uniform"
         android:backgroundTint="#000000"
         android:fontFamily="@font/poppins_bold"
         android:onClick="startCalculate"

@@ -4,7 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_calculated_wage_view.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/activity_start_view.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/activity_start_view.xml" value="0.25" />
       </map>
     </option>
   </component>
