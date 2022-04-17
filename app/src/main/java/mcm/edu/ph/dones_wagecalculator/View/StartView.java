@@ -14,10 +14,11 @@ import android.widget.Toast;
 
 import mcm.edu.ph.dones_wagecalculator.R;
 
+@SuppressWarnings("FieldCanBeLocal")
 public class StartView extends AppCompatActivity {
 
     private EditText txtHours, txtName;
-    private String TAG = "start";
+    private final String TAG = "start";
     private int employeeType;
 
 
@@ -30,7 +31,7 @@ public class StartView extends AppCompatActivity {
     }
 
     // initializing
-    public void initUI() {
+    private void initUI() {
         txtHours = findViewById(R.id.txtHours);
         txtName = findViewById(R.id.txtName);
     }
@@ -41,7 +42,6 @@ public class StartView extends AppCompatActivity {
     public void partTime(View v) { employeeType = 3; }
 
     // go to calculated wage activity
-    @SuppressWarnings("ConstantConditions")
     public void startCalculate(View v) {
 
         if (employeeType != 0 && txtName != null && txtHours != null) {
@@ -64,7 +64,5 @@ public class StartView extends AppCompatActivity {
         }
 
     }
-
-
 
 }

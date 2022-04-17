@@ -17,7 +17,7 @@ import mcm.edu.ph.dones_wagecalculator.R;
 public class CalculatedWageView extends AppCompatActivity {
 
     private TextView txtWage, txtWageOT, txtWageTotal, txtHoursTotal, txtHoursOT, txtTitle, txtEmployee;
-    private String TAG = "calculated wage";
+    private final String TAG = "calculated wage";
     private int employeeType;
     private double hoursTotal, hoursOT, wage, wageTotal, wageOT;
 
@@ -30,18 +30,19 @@ public class CalculatedWageView extends AppCompatActivity {
         wageResult();
     }
 
-    public void initUI() {
+    // initializing UI
+    private void initUI() {
         txtWage = findViewById(R.id.txtWage);
         txtWageOT = findViewById(R.id.txtWageOT);
         txtWageTotal = findViewById(R.id.txtWageTotal);
         txtHoursTotal = findViewById(R.id.txtHoursTotal);
         txtHoursOT = findViewById(R.id.txtHoursOT);
-        txtTitle = findViewById(R.id.txtTitle);
+        txtTitle = findViewById(R.id.txtDisplayTitle);
         txtEmployee = findViewById(R.id.txtEmployee);
     }
 
     @SuppressLint("SetTextI18n")
-    public void wageResult(){
+    private void wageResult(){
         
         Bundle bundle = getIntent().getExtras();
         String name = bundle.getString("name");
@@ -51,8 +52,9 @@ public class CalculatedWageView extends AppCompatActivity {
         Log.d(TAG, "employeeType: "+ employeeType);
         Log.d(TAG, "hoursTotal: "+ hoursTotal);
 
-        wageCalculate();
+        wageCalculate(); // calculates the wage
 
+        // displaying employee wage and info
         txtTitle.setText(name + "'s Calculated Wage");
         txtWage.setText("₱" + wage);
         txtWageOT.setText("₱" + wageOT);
@@ -67,10 +69,11 @@ public class CalculatedWageView extends AppCompatActivity {
         }
     }
 
-    public void wageCalculate() {
+    // method to calculate the wage
+    private void wageCalculate() {
         Calculator calc = new Calculator();
         wage = calc.wage(employeeType, hoursTotal);
-        if (hoursTotal > 8){
+        if (hoursTotal > 8){ // if overtime
             Log.d(TAG, "OVERTIME!");
             hoursOT = calc.hoursOT(hoursTotal);
             wageOT = calc.overtimeWage(employeeType, hoursOT);
@@ -78,6 +81,7 @@ public class CalculatedWageView extends AppCompatActivity {
         wageTotal = calc.totalWage(wage, wageOT);
     }
 
+    // when "Restart" button is pressed
     public void wageRestart(View v){
         Intent i = new Intent(CalculatedWageView.this, StartView.class);
         startActivity(i);
