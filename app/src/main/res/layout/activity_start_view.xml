@@ -7,7 +7,7 @@
     tools:context=".View.StartView">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/bgStart"
         android:layout_width="1080dp"
         android:layout_height="1920dp"
         app:layout_constraintBottom_toBottomOf="parent"
