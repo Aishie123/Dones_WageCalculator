@@ -4,12 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import mcm.edu.ph.dones_wagecalculator.R;
@@ -32,8 +28,8 @@ public class StartView extends AppCompatActivity {
 
     // initializing
     private void initUI() {
-        txtHours = findViewById(R.id.txtHours);
-        txtName = findViewById(R.id.txtName);
+        txtHours = findViewById(R.id.etHours);
+        txtName = findViewById(R.id.etName);
     }
 
     // employee types
@@ -48,7 +44,6 @@ public class StartView extends AppCompatActivity {
 
             String name = txtName.getText().toString();
             double hours = Double.parseDouble(txtHours.getText().toString());
-            Log.d(TAG,  "Hours:" + hours);
 
             Intent i = new Intent(StartView.this, CalculatedWageView.class);
             i.putExtra("employee", employeeType);

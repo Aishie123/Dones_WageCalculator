@@ -3,9 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_calculated_wage_view.xml" value="0.24210526315789474" />
+        <entry key="app/src/main/res/layout/activity_calculated_wage_view.xml" value="0.15306122448979592" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.375" />
-        <entry key="app/src/main/res/layout/activity_start_view.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_start_view.xml" value="0.1" />
       </map>
     </option>
   </component>

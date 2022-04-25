@@ -26,9 +26,9 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup"
-        app:layout_constraintEnd_toEndOf="@+id/txtName"
-        app:layout_constraintStart_toStartOf="@+id/txtName"
-        app:layout_constraintTop_toBottomOf="@+id/txtName"
+        app:layout_constraintEnd_toEndOf="@+id/etName"
+        app:layout_constraintStart_toStartOf="@+id/etName"
+        app:layout_constraintTop_toBottomOf="@+id/etName"
         tools:ignore="HardcodedText" />
 
     <TextView
@@ -39,7 +39,7 @@
         android:text="Employee Name:"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtName"
+        app:layout_constraintBottom_toTopOf="@+id/etName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -55,7 +55,7 @@
         android:text="Hours of Work:"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtHours"
+        app:layout_constraintBottom_toTopOf="@+id/etHours"
         app:layout_constraintEnd_toEndOf="@+id/radioGroup"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="@+id/radioGroup"
@@ -105,14 +105,14 @@
     </RadioGroup>
 
     <EditText
-        android:id="@+id/txtName"
+        android:id="@+id/etName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:fontFamily="@font/poppins_light"
         android:hint="Enter your name here"
-        android:inputType="textPersonName"
+        android:inputType="textPersonName|textCapSentences"
         android:minHeight="48dp"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/viewEmployeeType"
@@ -123,7 +123,7 @@
         tools:ignore="Autofill,HardcodedText,TextContrastCheck" />
 
     <EditText
-        android:id="@+id/txtHours"
+        android:id="@+id/etHours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -151,9 +151,9 @@
         android:onClick="startCalculate"
         android:text="Calculate"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/txtHours"
-        app:layout_constraintStart_toStartOf="@+id/txtHours"
-        app:layout_constraintTop_toBottomOf="@+id/txtHours"
+        app:layout_constraintEnd_toEndOf="@+id/etHours"
+        app:layout_constraintStart_toStartOf="@+id/etHours"
+        app:layout_constraintTop_toBottomOf="@+id/etHours"
         tools:ignore="HardcodedText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

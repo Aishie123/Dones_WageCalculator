@@ -54,7 +54,7 @@
                 android:text="Employee Type:"
                 android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -65,7 +65,7 @@
                 android:text="employee"
                 android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow>
@@ -77,7 +77,7 @@
                 android:text="Total Wage Received:"
                 android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -89,7 +89,7 @@
                 android:text="total wage"
                 android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
         </TableRow>
 
         <View
@@ -105,7 +105,7 @@
                 android:text="Total Regular Wage:"
                 android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -117,7 +117,7 @@
                 android:text="regular wage"
                 android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow>
@@ -128,7 +128,7 @@
                 android:text="Total Overtime Wage:"
                 android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -139,7 +139,7 @@
                 android:text="overtime wage"
                 android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
 
         </TableRow>
 
@@ -156,7 +156,7 @@
                 android:text="Total Hours Rendered:"
                 android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -168,7 +168,7 @@
                 android:text="hours"
                 android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow>
@@ -179,7 +179,7 @@
                 android:text="Total Hours Overtime:"
                 android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -190,7 +190,7 @@
                 android:text="hours OT"
                 android:autoSizeTextType="uniform"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
         </TableRow>
     </TableLayout>
 
